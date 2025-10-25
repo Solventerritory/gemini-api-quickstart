@@ -102,7 +102,7 @@ gcloud auth application-default login
 
 3) Use a service account JSON key (server-to-server)
 
- - Create a service account in your Google Cloud project, download the JSON key file, and set the path:
+- Create a service account in your Google Cloud project, download the JSON key file, and set the path:
 
 ```bash
 export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
