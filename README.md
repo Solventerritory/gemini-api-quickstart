@@ -109,4 +109,4 @@ export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
 flask run
 ```
 
-If you prefer the app to fail loudly with a helpful message instead of crashing at import, the server now prints a short guidance message at startup and surfaces it in the UI when credentials are missing.
+This change prevents the app from crashing when credentials are missing. Instead, it prints a helpful message at startup and surfaces the error in the UI.
