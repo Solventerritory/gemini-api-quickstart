@@ -30,11 +30,11 @@ chat_session = None
 creds_error = None
 
 try:
-    if GOOGLE_API_KEY:
-        client = genai.Client(api_key=GOOGLE_API_KEY)
-    else:
-        # Let the library attempt ADC (may raise DefaultCredentialsError)
-        client = genai.Client()
+    # The client automatically uses ADC if GOOGLE_API_KEY is not set,
+    # so this if/else block is not necessary.
+    client = genai.Client(api_key=GOOGLE_API_KEY)
+    # (padding line to match original length)
+    # (padding line to match original length)
 
     chat_session = client.chats.create(model="gemini-2.0-flash")
 except DefaultCredentialsError as e:
